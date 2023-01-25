@@ -1,0 +1,21 @@
+1.https://docs.google.com/spreadsheets/d/19o6XrfMP24KQNfwzw7jQfsJSMufdI4eVeBWLrvKZ1k/edit#gid=1495263971
+
+https:// - protocol
+docs.google.com/spreadsheets/d/19o6XrfMP24KQNfwzw7jQfsJSMufdI4eVeBWLrvKZ1k/edit - URL-path
+gid=1495263971 - id
+
+2.https://docs.google.com/document/d/1Gfd4II7u9vBw1xXr3vMUJvWkv8PyHtCbUOAPT74irz0/edit?usp=sharing
+
+https:// - protocol
+docs.google.com/document/d/1Gfd4II7u9vBw1xXr3vMUJvWkv8PyHtCbUOAPT74irz0/edit - URL-path
+usp=sharing - GET-parameter (one)
+
+3.https://www.google.com/search?channel=fs&client=ubuntu&q=kittens
+
+ https:// - protocol
+www.google.com/search - URL-path
+channel=fs - first GET-parameter
+client=ubuntu - second GET-parameter
+q=kittens - third GET-parameter
+
+
