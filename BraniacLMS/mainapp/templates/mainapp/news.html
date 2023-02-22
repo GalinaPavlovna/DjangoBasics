@@ -8,27 +8,17 @@
     <div class="row">
 
       <div class="col-lg-8">
-        {% for i in range %}
+        {% for i in news_lst %}
         <div class="card my-2">
           <div class="card-body">
-            <h5 class="card-title">{{i|head_getter}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{news_date|date:'d M Y h:i:s'}}</h6>
-            <p class="card-text">{{i|content_getter}}</p>
-            <a href="#" class="card-link">Подробнее</a>
+            <h5 class="card-title">{{i.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{i.created_at|date:'d M Y h:i:s'}}</h6>
+            <p class="card-text">{{i.anons}}</p>
+            <a href="{% url 'mainapp:NewsBody' i.pk %}" class="card-link">Подробнее</a>
           </div>
         </div>
 
         {% endfor %}
-        <div class="card my-2">
-          <div class="card-body">
-            <h5 class="card-title">Утром отключили воду</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{news_date|date:'d M Y h:i:s'}}</h6>
-            <p class="card-text">В результате аварии 
-              на <a href="https://www.google.com/search?q={{word}}">{{word}} </a> без воды остались жители сразу двух улиц города.
-              - Авария произошла на улице Комсомольской </p>
-            <a href="#" class="card-link">Подробнее</a>
-          </div>
-        </div>
 
       </div>
       </div>
