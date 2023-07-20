@@ -44,9 +44,16 @@ content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <ul class="list-unstyled">
 <li><a href="{% url 'mainapp:main'%}">Домашняя</a></li>
 <li><a href="{% url 'mainapp:news'%}">Новости</a></li>
-<li><a href="{% url 'mainapp:login'%}">Войти</a></li>
+<li>
+    {% if user.is_authenticated %}
+    <a href="{% url 'authapp:logout'%}">Выйти</a>
+    {% else %}
+    <a href="{% url 'authapp:login'%}">Войти</a>
+    {% endif %}
+</li>
 </ul>
 </p>
+
 </div>
 <div class="col-sm-6 col-md-3 text-center">
 <p>
